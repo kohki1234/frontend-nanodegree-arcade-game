@@ -1,0 +1,5 @@
+Question list for the project
+
+line 8 - what is 'sprite' refer to ? What is the 'this'  refer to ?
+
+
