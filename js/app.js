@@ -37,7 +37,7 @@ var Player = function(x,y) {
 };
 
 Player.prototype.update = function(dt) {
-    this.y++ ;
+    // Now I am not sure what to write here...
 };
 
 
@@ -45,16 +45,52 @@ Player.prototype.render = function(){
     ctx.drawImage(Resources.get(this.sprite), this.x, this.y);
 };
 
-Player.prototype.handleInput = function() {
-  // I am not sure what to write here...
+Player.prototype.handleInput = function(keycode) {
+  if(keycode =='up')
+  {
+    if(this.y>65)
+    {
+    this.y=this.y-85;
+    }
+  }
+
+  else if (keycode == 'down')
+  {
+    if(this.y<435)
+    {
+    this.y=this.y+85;
+    }
+  }
+
+  else if (keycode == 'right')
+  {
+    if (this.x < 505)
+    {
+        this.x = this.x + 100;
+    }
+  }
+
+  else if (keycode == 'left')
+  {
+    if (this.x > 0)
+    {
+        this.x = this.x - 100;
+    }
+  }
 };
 
 // Now instantiate your objects.
 // Place all enemy objects in an array called allEnemies
 // Place the player object in a variable called player
 
+Player.prototype.reset=function(x,y){
+    this.x = x;
+    this.y = 200;
+};
+
+
 var allEnemies = [new Enemy(100,100), new Enemy(200,200)];
-var player = new Player(50,10);
+var player = new Player(250,200);
 
 
 // This listens for key presses and sends the keys to your
