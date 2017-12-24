@@ -38,6 +38,17 @@ var Player = function(x,y) {
 
 Player.prototype.update = function(dt) {
     // Now I am not sure what to write here...
+    // For the Player.prototype.update, you might want to put in the logic 
+    // so that the player cannot move off screen.
+
+    if (this.x < 0){
+        this.x = 505
+    }
+
+    else if (this.x > 505){
+        this.x = 0
+    }
+    
 };
 
 
