@@ -4,9 +4,13 @@
 To start this arcade game crone, you have to open the folder called 'frontend-nanodegree-arcade-game-master'. Inside of the folder, there are folders and files below,
 
 **css**...this folder contains style sheet file to adjust styles of the website.
+
 **images** ... Inside of this folder, you can see the image files to be shown on the arcade game screen.
+
 **js** ... Inside of this folder, there are 3 javascript files to control the movement and behavior on the arcade game. The detailed explanation will be done later section.
+
 **index** ... this is the html file and you need to choose this file to be shown on the browser.
+
 **README.md**...this file, it explains basic function for each files and how they work.
 
 Now you have to choose the file called '**index**' and drag and drop on the new browser tab, so that you will be able to see the screen like arcade game.
