@@ -15,7 +15,15 @@ var Enemy = function(x,y) {
 // Update the enemy's position, required method for game
 // Parameter: dt, a time delta between ticks
 Enemy.prototype.update = function(dt) {
-    this.x++ ;
+
+	if (this.x < 480){
+		this.x++ ;
+	}
+    
+    else if (this.x = 480){
+    	this.x = 0 ;
+    }
+
         // 8You should multiply any movement by the dt parameter
         // which will ensure the game runs at the same speed for
         // all computers.
@@ -40,15 +48,23 @@ Player.prototype.update = function(dt) {
     // Now I am not sure what to write here...
     // For the Player.prototype.update, you might want to put in the logic 
     // so that the player cannot move off screen.
+    for (i=0;i<2;i++) {
 
-    if (this.x < 0){
-        this.x = 505
+        if (this.x > 480){
+            this.x = 400;
+        }
+
+        else if (this.x+60>allEnemies[i].x && this.x<allEnemies[i].x+60 && this.y+5>allEnemies[i].y && this.y<allEnemies[i].y+5)
+        {
+            this.reset(this.x,435);
+        }
+
+        else if (this.y < 1){
+            alert("Conguraturations !! You won !!")
+            this.reset(this.x,435);
+        }
     }
 
-    else if (this.x > 505){
-        this.x = 0
-    }
-    
 };
 
 
@@ -59,23 +75,23 @@ Player.prototype.render = function(){
 Player.prototype.handleInput = function(keycode) {
   if(keycode =='up')
   {
-    if(this.y>65)
+    if(this.y>0)
     {
-    this.y=this.y-85;
+    this.y=this.y-50;
     }
   }
 
   else if (keycode == 'down')
   {
-    if(this.y<435)
+    if(this.y<400)
     {
-    this.y=this.y+85;
+    this.y=this.y+50;
     }
   }
 
   else if (keycode == 'right')
   {
-    if (this.x < 505)
+    if (this.x < 450)
     {
         this.x = this.x + 100;
     }
@@ -94,14 +110,14 @@ Player.prototype.handleInput = function(keycode) {
 // Place all enemy objects in an array called allEnemies
 // Place the player object in a variable called player
 
-Player.prototype.reset=function(x,y){
+Player.prototype.reset = function(x,y){
     this.x = x;
-    this.y = 200;
+    this.y = 400;
 };
 
 
-var allEnemies = [new Enemy(100,100), new Enemy(200,200)];
-var player = new Player(250,200);
+var allEnemies = [new Enemy(0,100), new Enemy(200,200)];
+var player = new Player(200,400);
 
 
 // This listens for key presses and sends the keys to your
