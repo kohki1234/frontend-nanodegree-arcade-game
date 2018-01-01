@@ -46,11 +46,11 @@ Player.prototype.update = function(dt) {
     // Now I am not sure what to write here...
     // For the Player.prototype.update, you might want to put in the logic 
     // so that the player cannot move off screen.
-    for (i = 0; i < 2; i++) {
+    for (i = 0; i < 3; i++) {
 
         if (this.x > 480) {
             this.x = 400;
-        } else if (this.x + 60 > allEnemies[i].x && this.x < allEnemies[i].x + 60 && this.y + 5 > allEnemies[i].y && this.y < allEnemies[i].y + 5) {
+        } else if (this.x + 60 > allEnemies[i].x && this.x < allEnemies[i].x + 60 && this.y + 25 > allEnemies[i].y && this.y < allEnemies[i].y + 25) {
             this.reset(this.x, 435);
         } else if (this.y < 1) {
             alert("Conguraturations !! You won !!")
@@ -95,7 +95,7 @@ Player.prototype.reset = function(x, y) {
 };
 
 
-var allEnemies = [new Enemy(0, 100), new Enemy(200, 200)];
+var allEnemies = [new Enemy(0, 150), new Enemy(200, 200), new Enemy(250,50)];
 var player = new Player(200, 400);
 
 
