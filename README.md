@@ -15,8 +15,20 @@ To start this arcade game crone, you have to open the folder called 'frontend-na
 
 Now you have to choose the file called '**index**' and drag and drop on the new browser tab, so that you will be able to see the screen like arcade game.
 
-## 2. Basic rules for playing classic arcade game
-In the game screen, You are able to control the movement of the player (a litle boy) by pressing any of the keys from ↑↓→←
+## 2. How to play this game 
+You will be able to see the 2 objects 
+
+**Player**...this is the one which you need to control, your goal is reaching on the river side at the top of screen.
+
+**Enemy**... this is enemy which you need to avoid on the screen because if you collides to this one, you need to start from the bottom of screen.
+
+In the game screen, You are able to control the movement of the player (a litle boy) by pressing any of the keys from ↑↓→←.
+You are able to see how each key works as below.
+
+- up (↑) ... this key allows you to move up the player on the screen
+- right (→)...this key allows yout to move  right on the screen.
+- down(↓)...this key allows you to move  down on the screen.
+- left (←)...this key allows you to move left on the screen.
 
 The goal of this mini game will be crossing the street and reaching the riverside (top of the screen) by controlling the player.
 You can see some enemies (bugs) to avoid. If your player colleds with the bugs, then your player are picked back to the start position (bottom of the screen) and you have to try again.
@@ -32,3 +44,7 @@ This file provides the game loop functionality (update entities and render), dra
      
 iii) resorces.js
 This is simply an image loading utility. It eases the process of loading image files so that they can be used within your game. It also includes a simple "caching" layer so it will reuse cached images if you attempt to load the same image multiple times.
+
+## 4. Contact information
+Name: Kohki Sato 
+E-mail: k48692003@yahoo.co.jp
